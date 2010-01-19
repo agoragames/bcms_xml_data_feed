@@ -2,7 +2,7 @@ class CreateXmlDataFeeds < ActiveRecord::Migration
   def self.up
     create_content_table :xml_data_feeds do |t|
       t.string :url 
-      t.text :contents 
+      t.text :cached_contents 
     end
     
     
