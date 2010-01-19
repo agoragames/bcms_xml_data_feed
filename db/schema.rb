@@ -204,10 +204,10 @@ ActiveRecord::Schema.define(:version => 20100118205655) do
     t.integer  "html_block_id"
     t.integer  "version"
     t.string   "name"
-    t.text     "content",         :limit => 2147483647
-    t.boolean  "published",                             :default => false
-    t.boolean  "deleted",                               :default => false
-    t.boolean  "archived",                              :default => false
+    t.text     "content",         :limit => 16777215
+    t.boolean  "published",                           :default => false
+    t.boolean  "deleted",                             :default => false
+    t.boolean  "archived",                            :default => false
     t.string   "version_comment"
     t.integer  "created_by_id"
     t.integer  "updated_by_id"
@@ -217,12 +217,12 @@ ActiveRecord::Schema.define(:version => 20100118205655) do
 
   create_table "html_blocks", :force => true do |t|
     t.integer  "version"
-    t.integer  "lock_version",                        :default => 0
+    t.integer  "lock_version",                      :default => 0
     t.string   "name"
-    t.text     "content",       :limit => 2147483647
-    t.boolean  "published",                           :default => false
-    t.boolean  "deleted",                             :default => false
-    t.boolean  "archived",                            :default => false
+    t.text     "content",       :limit => 16777215
+    t.boolean  "published",                         :default => false
+    t.boolean  "deleted",                           :default => false
+    t.boolean  "archived",                          :default => false
     t.integer  "created_by_id"
     t.integer  "updated_by_id"
     t.datetime "created_at"

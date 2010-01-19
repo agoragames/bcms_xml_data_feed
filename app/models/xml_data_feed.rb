@@ -56,9 +56,6 @@ class XmlDataFeed < ActiveRecord::Base
   end
   
   def expired?
-    #puts "in expired?"
-    #p self.cached_contents.nil?
-    #p self.expires_at.nil?
     self.cached_contents.nil? || (self.expires_at.nil? || self.expires_at < Time.now.utc)
   end
 
