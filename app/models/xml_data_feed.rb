@@ -27,6 +27,7 @@ class XmlDataFeed < ActiveRecord::Base
       logger.info("Loaded feed: #{url}")
       self.cached_contents = xml_feed_data
       self.expires_at = Time.now.utc + TTL
+      # TODO set etag if present
       save
       
       logger.error("Feed headers: #{xml_feed_data.meta.inspect}") if xml_feed_data.respond_to?(:meta)
