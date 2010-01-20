@@ -1,3 +1,4 @@
 <%= f.cms_text_field :name %>
 <%= f.cms_drop_down :handler, ActionView::Template.template_handler_extensions, :default => "erb" %>
+<%= f.cms_drop_down :xml_data_feed_id, XmlDataFeed.find(:all).map { |data_feed| [data_feed.name, data_feed.id] } %>
 <%= f.cms_text_area :template, :default_value => @block.class.default_template %>

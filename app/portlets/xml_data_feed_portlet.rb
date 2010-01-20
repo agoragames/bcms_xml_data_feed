@@ -1,8 +1,7 @@
 class XmlDataFeedPortlet < Portlet
-    
+
   def render
-    raise ArgumentError, "No feed URL specified" if self.url.blank?
-    @xml_data_feed = XmlDataFeed.find_or_create_by_url(self.url).contents
+    @xml_data_feed = XmlDataFeed.find(self.xml_data_feed_id).contents
   end
     
 end
