@@ -4,30 +4,25 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{bcms_xml_data_feeds}
-  s.version = "0.0.0"
+  s.name = %q{bcms_xml_data_feed}
+  s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["AgoraGames"]
-  s.date = %q{2010-01-19}
+  s.date = %q{2010-01-20}
   s.description = %q{A BrowserCMS module which fetches, caches and displays arbitrary XML feeds. Based on http://github.com/jonleighton/bcms_feeds by j@jonathanleighton.com}
   s.email = %q{github@agoragames.com}
   s.extra_rdoc_files = [
     "README"
   ]
   s.files = [
-    "app/controllers/application_controller.rb",
-     "app/controllers/cms/xml_data_feeds_controller.rb",
-     "app/helpers/application_helper.rb",
+    "app/controllers/cms/xml_data_feeds_controller.rb",
      "app/models/xml_data_feed.rb",
      "app/portlets/xml_data_feed_portlet.rb",
-     "app/views/cms/xml_data_feeds/_form.html.erb",
-     "app/views/cms/xml_data_feeds/render.html.erb",
-     "app/views/portlets/xml_data_feed/_form.html.erb",
-     "app/views/portlets/xml_data_feed/render.html.erb",
      "db/migrate/20100118155849_create_xml_data_feeds.rb",
      "db/migrate/20100118205655_add_xml_data_feed_expires_at_and_etag.rb",
-     "lib/bcms_xml_data_feeds.rb",
+     "lib/bcms_xml_data_feed.rb",
+     "lib/bcms_xml_data_feed/routes.rb",
      "rails/init.rb"
   ]
   s.homepage = %q{http://github.com/agoragames/bcms_xml_data_feed}

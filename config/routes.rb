@@ -1,6 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.namespace('cms') {|cms| cms.content_blocks :xml_data_feeds }
-
+  map.routes_for_bcms_xml_data_feed
   map.routes_for_browser_cms
 
   # The priority is based upon order of creation: first created -> highest priority.

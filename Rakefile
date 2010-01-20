@@ -12,17 +12,20 @@ require 'tasks/rails'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gemspec|
-    gemspec.name = "bcms_xml_data_feeds"
+    gemspec.name = "bcms_xml_data_feed"
     gemspec.summary = "XML Data Feeds in BrowserCMS"
     gemspec.description = "A BrowserCMS module which fetches, caches and displays arbitrary XML feeds. Based on http://github.com/jonleighton/bcms_feeds by j@jonathanleighton.com"
     gemspec.email = "github@agoragames.com"
     gemspec.homepage = "http://github.com/agoragames/bcms_xml_data_feed"
     gemspec.authors = ["AgoraGames"]
-    gemspec.files = Dir["app/**/*"]
-    gemspec.files += Dir["db/migrate/*.rb"]
-    gemspec.files -= Dir["db/migrate/*_browsercms_*.rb"]
-    gemspec.files -= Dir["db/migrate/*_load_seed_data.rb"]
-    gemspec.files += Dir["lib/bcms_xml_data_feeds.rb"]
+    gemspec.files = Dir["app/models/*"]
+    gemspec.files += Dir["app/portlets/*"]
+    gemspec.files += Dir["app/controllers/cms/*"]
+    gemspec.files += Dir["app/views/cms/*"]
+    gemspec.files += Dir["app/views/portlets/*"]
+    gemspec.files += Dir["db/migrate/[0-9]*_xml_data_feed*.rb"]
+    gemspec.files += Dir["lib/bcms_xml_data_feed.rb"]
+    gemspec.files += Dir["lib/bcms_xml_data_feed/*"]
     gemspec.files += Dir["rails/init.rb"]
     gemspec.add_dependency('xml-simple')
   end
